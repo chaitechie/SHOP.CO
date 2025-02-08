@@ -50,5 +50,20 @@ cd SHOP.CO
 ```
 3 - Create a env file and add your Firebase credentials:
 ```
-
+REACT_APP_FIREBASE_API_KEY=your_api_key
+REACT_APP_FIREBASE_AUTH_DOMAIN=your_auth_domain
+REACT_APP_FIREBASE_PROJECT_ID=your_project_id
 ```
+4 - Start the development server:
+```
+npm run dev
+```
+## Project Status 
+SHOP.CO is currently under development. More features and improvements will be added soon.
+
+## Contributions
+Contributions are welcome! Feel free to fork the repository and submit a pull request.
+
+## Contact 
+For any queries, reach out to [Chaitanya] at [vankar.chaitanya@outlook.com].
+
