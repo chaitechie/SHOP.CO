@@ -65,5 +65,5 @@ SHOP.CO is currently under development. More features and improvements will be a
 Contributions are welcome! Feel free to fork the repository and submit a pull request.
 
 ## Contact 
-For any queries, reach out to [Chaitanya] at [vankar.chaitanya@outlook.com].
+For any queries, reach out to (Chaitanya)[vankar.chaitanya@outlook.com].
 
