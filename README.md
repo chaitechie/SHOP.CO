@@ -1,7 +1,7 @@
 # SHOP.CO - eCommerce Website
 
 ## Overview 
-SHOP.CO is a modern eCommerce platform built using React, Zustand, Firebase, and Tailwind CSS. The project is currently in development and aims to provide a seamless shopping experience with features like authentication, product filtering, and cart management.
+SHOP.CO is a modern eCommerce platform built using React, Redux toolkit, Firebase, and Tailwind CSS. The project is currently in development and aims to provide a seamless shopping experience with features like authentication, product filtering, and cart management.
 
 ## Tech Stack
 - React - Frontend framework for building the UI.
