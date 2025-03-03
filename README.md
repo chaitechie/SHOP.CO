@@ -108,32 +108,8 @@ npm run test:watch
 
 ---
 
-## 📂 Folder Structure
 
-```
-📦 ecommerce-app
- ┣ 📂 src
- ┃ ┣ 📂 components
- ┃ ┃ ┣ 📜 ProductList.tsx
- ┃ ┃ ┣ 📜 ProductCard.tsx
- ┃ ┃ ┣ 📜 Cart.tsx
- ┃ ┣ 📂 redux
- ┃ ┃ ┣ 📂 slices
- ┃ ┃ ┃ ┣ 📜 productSlice.ts
- ┃ ┃ ┃ ┣ 📜 cartSlice.ts
- ┃ ┃ ┃ ┣ 📜 filterSlice.ts
- ┃ ┣ 📂 firebase
- ┃ ┃ ┣ 📜 firebaseConfig.ts
- ┃ ┣ 📂 pages
- ┃ ┃ ┣ 📜 Home.tsx
- ┃ ┃ ┣ 📜 ProductDetail.tsx
- ┃ ┃ ┣ 📜 CartPage.tsx
- ┃ ┣ 📜 App.tsx
- ┣ 📜 package.json
- ┣ 📜 README.md
-```
 
----
 
 ## 📌 Future Improvements
 
