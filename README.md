@@ -1,30 +1,176 @@
-# React + TypeScript + Vite
+# 🛒 SHOP.CO (React + Redux + TAILWINDCSS + Firebase)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📌 Overview
 
-Currently, two official plugins are available:
+This is a fully functional **E-Commerce Website** built using **React, Redux Toolkit, TypeScript, and Firebase**. It provides a seamless shopping experience with product filtering, cart management, authentication, and real-time database support.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### 🛍️ Product Listing & Filtering
 
-- Configure the top-level `parserOptions` property like this:
+✅ Users can **filter products** by:
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+- **Category**
+- **Price (Low to High / High to Low)**
+- **Rating**
+
+### 🔍 Product Details Page
+
+✅ Clicking a product **opens a detailed view**, with data dynamically fetched via Redux.
+
+### 🛒 Cart Management
+
+✅ Users can **add and remove products** from the cart. ✅ Cart state is globally managed using Redux Toolkit.
+
+### 🔥 Firebase Integration
+
+✅ **Firebase Authentication**: Supports user login & signup. ✅ **Firestore Database**: Stores user data, orders, and products. ✅ **Realtime Updates**: Always fetches the latest product details.
+
+### ⚡ State Management with Redux Toolkit
+
+✅ Uses **Redux Toolkit (**\`\`**)** for managing:
+
+- Products
+- Filters
+- Cart
+
+### 🚀 Error Handling & Performance Optimization
+
+✅ **Error Boundaries** ensure the app doesn’t crash unexpectedly. ✅ Uses `useEffect` for **efficient data fetching & updates**.
+
+---
+
+## 🛠️ Tech Stack
+
+| **Category**           | **Technology**                   |
+| ---------------------- | -------------------------------- |
+| **Frontend**           | React, TypeScript, Tailwind CSS  |
+| **State Management**   | Redux Toolkit, Immer             |
+| **Backend & Database** | Firebase (Firestore, Auth)       |
+| **Routing**            | React Router                     |
+| **Testing**            | Jest, React Testing Library, MSW | currently working 
+| **Deployment**         | Vercel / Firebase Hosting        | to be soon
+
+---
+
+## 🚀 Installation & Setup
+
+### 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/yourusername/ecommerce-app.git
+cd ecommerce-app
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### 2️⃣ Install Dependencies
+
+```bash
+npm install
+```
+
+### 3️⃣ Configure Firebase
+
+- Create a **Firebase project** at [Firebase Console](https://console.firebase.google.com/).
+- Enable **Firestore Database & Authentication**.
+- Copy Firebase config and replace it inside `.env` file:
+
+```bash
+REACT_APP_FIREBASE_API_KEY=your_api_key
+REACT_APP_FIREBASE_AUTH_DOMAIN=your_auth_domain
+REACT_APP_FIREBASE_PROJECT_ID=your_project_id
+```
+
+### 4️⃣ Run the Development Server
+
+```bash
+npm run dev
+```
+
+Your app is now running at [**http://localhost:3000**](http://localhost:3000) 🎉
+
+---
+
+## 🧪 Running Tests
+
+To run all tests:
+
+```bash
+npm test
+```
+
+To run tests in **watch mode**:
+
+```bash
+npm run test:watch
+```
+
+---
+
+## 📂 Folder Structure
+
+```
+📦 ecommerce-app
+ ┣ 📂 src
+ ┃ ┣ 📂 components
+ ┃ ┃ ┣ 📜 ProductList.tsx
+ ┃ ┃ ┣ 📜 ProductCard.tsx
+ ┃ ┃ ┣ 📜 Cart.tsx
+ ┃ ┣ 📂 redux
+ ┃ ┃ ┣ 📂 slices
+ ┃ ┃ ┃ ┣ 📜 productSlice.ts
+ ┃ ┃ ┃ ┣ 📜 cartSlice.ts
+ ┃ ┃ ┃ ┣ 📜 filterSlice.ts
+ ┃ ┣ 📂 firebase
+ ┃ ┃ ┣ 📜 firebaseConfig.ts
+ ┃ ┣ 📂 pages
+ ┃ ┃ ┣ 📜 Home.tsx
+ ┃ ┃ ┣ 📜 ProductDetail.tsx
+ ┃ ┃ ┣ 📜 CartPage.tsx
+ ┃ ┣ 📜 App.tsx
+ ┣ 📜 package.json
+ ┣ 📜 README.md
+```
+
+---
+
+## 📌 Future Improvements
+
+🔹 Payment integration (Stripe/Razorpay)\
+🔹 User profile with order history\
+🔹 Wishlist functionality
+
+---
+
+## 💡 Contributing
+
+1. **Fork the repository**
+2. **Create a new branch**
+
+```bash
+git checkout -b feature/new-feature
+```
+
+3. **Commit changes**
+
+```bash
+git commit -m "Added new feature"
+```
+
+4. **Push the branch**
+
+```bash
+git push origin feature/new-feature
+```
+
+
+
+## 📜 License
+
+This project is **open-source** under the MIT License.
+
+---
+
+
+
