@@ -50,8 +50,8 @@ This is a fully functional **E-Commerce Website** built using **React, Redux Too
 | **State Management**   | Redux Toolkit, Immer             |
 | **Backend & Database** | Firebase (Firestore, Auth)       |
 | **Routing**            | React Router                     |
-| **Testing**            | Jest, React Testing Library, MSW |
-| **Deployment**         | Vercel / Firebase Hosting        |
+| **Testing**            |  Vitest                          |  learning and testing undergoing 
+
 
 ---
 
@@ -107,28 +107,7 @@ npm run test:watch
 
 ## 📂 Folder Structure
 
-```
-📦 ecommerce-app
- ┣ 📂 src
- ┃ ┣ 📂 components
- ┃ ┃ ┣ 📜 ProductList.tsx
- ┃ ┃ ┣ 📜 ProductCard.tsx
- ┃ ┃ ┣ 📜 Cart.tsx
- ┃ ┣ 📂 redux
- ┃ ┃ ┣ 📂 slices
- ┃ ┃ ┃ ┣ 📜 productSlice.ts
- ┃ ┃ ┃ ┣ 📜 cartSlice.ts
- ┃ ┃ ┃ ┣ 📜 filterSlice.ts
- ┃ ┣ 📂 firebase
- ┃ ┃ ┣ 📜 firebaseConfig.ts
- ┃ ┣ 📂 pages
- ┃ ┃ ┣ 📜 Home.tsx
- ┃ ┃ ┣ 📜 ProductDetail.tsx
- ┃ ┃ ┣ 📜 CartPage.tsx
- ┃ ┣ 📜 App.tsx
- ┣ 📜 package.json
- ┣ 📜 README.md
-```
+
 
 ---
 
