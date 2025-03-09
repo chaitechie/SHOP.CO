@@ -2,9 +2,10 @@ export interface ICart {
     id:string,
     product_title:string,
     product_price:number,
-    product_category:string,
     product_rating:number,
-    quatity:number
+    quatity:number,
+    product_image:string,
+    userUid:string
 }
 
 
@@ -14,4 +15,6 @@ export interface CartState {
     status : 'idle' | 'loading' | 'succeeded' | 'failed',
     error: string | null,
     cartId:string,
+    userUid:string,
+    filteredCart:ICart[]
 }

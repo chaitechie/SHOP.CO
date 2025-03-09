@@ -31,6 +31,7 @@ const initialState: ProductState = {
     product_rating: 0,
     product_price: 0,
     product_image: "",
+    category: ""
   },
 };
 // reducer for product slice

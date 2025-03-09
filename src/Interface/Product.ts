@@ -1,4 +1,5 @@
 export interface IProduct  {
+    category: string
    
     id:string,
     product_title:string,

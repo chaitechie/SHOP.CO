@@ -18,20 +18,25 @@ const initialState: CartState = {
   status: "idle",
   error: null,
   cartId: "",
+  userUid: "",
+  filteredCart: [],
 };
 
 const cartSlice = createSlice({
   name: "carts",
   initialState,
   reducers: {
-    deleteCart(state, action: PayloadAction<{ CartId: string }>) {
-      const index = state.cart.findIndex(
-        (item) => item.id === action.payload.CartId
-      );
-      if (index !== -1) {
-        state.totalPrice -= state.cart[index].product_price * 1;
-        state.cart.splice(index, 1);
+    setFilteredCart(state, action: PayloadAction<string>) {
+      state.userUid = action.payload;
+      cartSlice.caseReducers.applyCart(state);
+    },
+    applyCart(state) {
+      let userCart = [...state.cart];
+      if (state.userUid) {
+        userCart = userCart.filter((prod) => prod.userUid === state.userUid);
       }
+
+      state.filteredCart = userCart;
     },
   },
   extraReducers: (builder) => {
@@ -51,5 +56,5 @@ const cartSlice = createSlice({
 });
 
 // Export actions
-export const { deleteCart } = cartSlice.actions;
+export const { setFilteredCart } = cartSlice.actions;
 export default cartSlice.reducer;

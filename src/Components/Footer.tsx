@@ -6,15 +6,15 @@ function Footer() {
     <>
     <div className=" relative p-[2%] ml-[2%] mr-[2%] mb-[-8%] bg-[#000] rounded-[30px] h-[180px]  z-[99] grid grid-cols-1 laptop:grid-cols-2 desktop:grid-cols-2 ">
 
-    <h1 className="text-[18px] laptop:text-[40px] desktop:text-[40px] font-['PlayfairDisplay'] cols-span-4 text-[#fff]">STAY UPTO DATE ABOUT OUR LATEST OFFERS</h1>
+    <h1 className="text-[16px] laptop:text-[36px] desktop:text-[40px] font-['PlayfairDisplay'] cols-span-4 text-[#fff]">STAY UPTO DATE ABOUT OUR LATEST OFFERS</h1>
 
   <div className='flex flex-col justify-center items-center gap-[10px] cols-span-8'>
     <input type="email" name="" id="" placeholder='Enter your email Address' className='w-[349px] h-[46px] rounded-[30px] placeholder:font-["Satoshi"] text-center text-[16px] regular'/>
     <button type="submit" className="w-[349px] h-[46px] rounded-[30px] font-['Satoshi'] text-[24px] regular bg-[#fff]" >Subscribe to Newsletter</button>
   </div>
  </div>
- <div className="w-screen bg-[#f2eff0]
-  absolute z-50 h-screen">
+ <div className="w-screen bg-[#f2eff0] h-[50%]
+  absolute z-50 ">
  
  
  <div className="grid grid-cols-2 gap-4 place-items-center gap-4 mt-[8%]

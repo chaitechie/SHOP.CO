@@ -129,9 +129,9 @@ function Home() {
         <h1 className="text-[4rem] font-['PlayfairDisplay'] text-center">
           BROSWE BY DRESS STYLE
         </h1>
-        <div className="grid grid-cols-1 laptop:grid-cols-12 desktop:grid-cols-12  gap-4 ">
-          <div className=" flex justify-between items-center bg-[#fff] rounded-[20px] col-span-4">
-            <h2 className="text-[2rem] font-bold font-['PlayfairDisplay'] ml-[20px]">
+        <div className="grid grid-cols-1 laptop:grid-cols-12 desktop:grid-cols-12  gap-8 mb-4">
+          <div className=" flex justify-between items-center bg-[#fff] rounded-[20px] col-span-4  mobile:w-full w-auto">
+            <h2 className="text-[2rem] font-bold font-['PlayfairDisplay'] ">
               Casual
             </h2>
             <Casual className="w-[400px] h-[200px] rounded-r-[20px]" />
@@ -143,15 +143,15 @@ function Home() {
             <Formal className="w-[400px] h-[200px] rounded-r-[20px] " />
           </div>
         </div>
-        <div className="grid grid-cols-1 laptop:grid-cols-12 desktop:grid-cols-12  gap-4 mt-5">
-          <div className="flex  bg-[#fff] flex  justify-between items-center rounded-[20px] col-span-8">
+        <div className="grid grid-cols-1 laptop:grid-cols-12 desktop:grid-cols-12  gap-8">
+          <div className="flex  bg-[#fff] flex  justify-between items-center rounded-[20px] col-span-8 mobile:w-full w-auto ">
             <h2 className="text-[2rem] font-bold font-['PlayfairDisplay']">
               Party
             </h2>
             <Party className="w-[400px] h-[200px] rounded-r-[20px]" />
           </div>
-          <div className=" flex  bg-[#fff] rounded-[20px] justify-between items-center col-span-4">
-            <h2 className="text-[2rem] font-bold font-['PlayfairDisplay'] ml-[20px]">
+          <div className=" flex  bg-[#fff] rounded-[20px] justify-between items-center col-span-4 mobile:w-full w-auto">
+            <h2 className="text-[2rem] font-bold font-['PlayfairDisplay'] ml-[20px] ">
               Gym
             </h2>
             <Gym className="w-[400px] h-[200px] rounded-r-[20px]" />
@@ -166,6 +166,7 @@ function Home() {
           OUR HAPPY CUSTOMERS
         </h1>
         <div className="grid  gap-4 laptop:grid-cols-3 mobile:grid-cols-3 tablet:grid-cols-2 grid-cols-1">
+
           <div className="bg-[#fff] border-solid border-[#000] border-[2px] rounded-lg w-400 h-242 pl-[2%]">
             <Rating name="read-only" value={5} />
             <h1 className="text-[1.8rem] font-['PlayfairDisplay'] ">Mooen</h1>

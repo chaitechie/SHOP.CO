@@ -27,11 +27,12 @@ function Shop() {
   };
 
   return (
-    <div className="grid grid-cols-12 gap-2 ">
-      <div className="col-span-2 row-span-6 ml-[2%] laptop:block desktop:block  mobile:hidden tablet:hidden ">
+    <div className="grid grid-cols-1 gap-2 laptop:grid-cols-12 desktop:grid-cols-12  ">
+      <div className="col-span-2 row-span-6 ml-[2%] hidden laptop:block laptop:block">
         <Sidebar />
       </div>
       <div className="col-span-10 row-span-8 p-2">
+
         {status !== "loading" ? (
           <ProductList newProduct={paginatedItems} />
         ) : (

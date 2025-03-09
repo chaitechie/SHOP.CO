@@ -2,9 +2,29 @@ import Account from "../assets/img/svg/account.svg";
 import Cart from "../assets/img/svg/cart.svg";
 import Search from "../assets/img/svg/search.png";
 import { Link } from "react-router-dom";
-import { useAuthStatus } from "../Hook/useAuthStatus";
+import {useState} from 'react'
+import { useAuthStatus } from '../Hook/useAuthStatus';
+import {getAuth} from 'firebase/auth';
+import { useNavigate } from "react-router-dom";
 function Header() {
+const auth = getAuth();
+const navigate = useNavigate();
   const {loggedIn,checkingStatus} = useAuthStatus();
+  const [isOpen,setIsOpen]=  useState<boolean>(false);
+
+  const handleOpen = () => {
+    setIsOpen(!isOpen)
+  }
+
+  const handleClose = () => {
+    setIsOpen(false)
+  }
+
+  const onLogout = () => {
+    auth.signOut()
+    navigate('/')
+  }
+
   return (
     <div className="w-screen h-[20vh]">
       <div className="bg-[#000] p-1 text-center ">
@@ -12,7 +32,7 @@ function Header() {
           Sign Up and get 20% to your first order.
         </h4>
       </div>
-      <div className="bg-[#fff] w-auto h-[4rem] p-2 flex items-center justify-center gap-6 ">
+      <div className="bg-[#fff] w-screen h-[4rem] p-2 flex items-center justify-center gap-6 ">
         <h1 className="font-['PlayfairDisplay'] text-[32px] font-bold">
           SHOP.CO
         </h1>
@@ -39,28 +59,32 @@ function Header() {
           "
           />
         </div>
-        <div className="flex gap-[20px]">
+        <div className="flex gap-[20px] mr-[5%]">
           <Link to={"/cart"} >
           <Cart />
           </Link>
-<button className="p-2 bg-gray-200 rounded-full hover:bg-gray-300">
-<Account />
-</button>
-     {
-      loggedIn === false && checkingStatus === true ? (<>
-      <div className="absolute left-1/2 -translate-x-1/2 mt-2 w-40 bg-white border border-gray-300 shadow-lg rounded-lg opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 transition-all duration-200">
-        <ul className="py-2 text-gray-700">
-          <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Sign Out</li>
-        </ul>
-      </div>
-      </>) :(<>
-        <div className="absolute left-1/2 -translate-x-1/2 mt-2 w-40 bg-white border border-gray-300 shadow-lg rounded-lg opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 transition-all duration-200">
-        <div className="py-2 text-gray-700">
-          <p className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Sign Out</p>
-        </div>
-      </div>
-      </>) 
-     }
+          
+            <div className="relative inline-block text-left">
+          
+          <Account  onMouseEnter={() => handleOpen()} onMouseLeave={() => handleClose()} />
+          
+          {
+            isOpen && (<div   className="z-10 absolute bg-black divide-y divide-gray-100 rounded-lg shadow-sm w-28" id="dropdownDelay"
+              onMouseEnter={() => setIsOpen(true)}
+              onMouseLeave={() => handleClose()}>
+            {loggedIn !== false && checkingStatus !== true ? (<ul>
+              <li>
+                <Link to={"/signin"} className="block px-4 py-2 hover:bg-gray-100 text-[14px]"> Sign In</Link>
+                <Link to ={"/signup"}  className="block px-4 py-2 hover:bg-gray-100 text-[14px]">Sign Up</Link>
+              </li>
+            </ul>) :(<ul>
+              <li><button  className="block px-4 py-2 hover:bg-gray-100 text-[14px]" onClick={onLogout}>Sign Out</button></li>
+            </ul>)}
+            </div>)
+          }
+
+
+            </div>
         </div>
        
       </div>
